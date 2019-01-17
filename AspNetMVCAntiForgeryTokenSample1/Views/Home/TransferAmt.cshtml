@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "TransferAmt";
+}
+
+
+<div>
+    <h2>Form Transfer</h2>
+    <form action="Home/TransferAmt" method=post>
+        Amount <input type="text" name="amount" value="" /><br /> Account No. <input type="text" name="account" value="" />
+        <br />
+        @Html.AntiForgeryToken()
+        <input type=submit value="Add Money" />
+    </form>
+    <br />
+    <h2>ajax Transfer</h2>
+    <h3>Ajax</h3>
+    <button id="btnAjaxCall" type="button">Ajax</button>
+    <br />
+    <h3>Post</h3>
+    <button id="btnPostCall" type="button">Post</button>
+    <br />
+    <h3>Get</h3>
+    <button id="btnGetCall" type="button">Get</button>
+    <br />
+    <br />
+    <h3>Post via Cookie</h3>
+    <button id="btnPostCookieCall" type="button">Post Cookie</button>
+    <div id="result"></div>
+</div>
+
+
